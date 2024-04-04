@@ -7,6 +7,8 @@ import com.java.springboot.services.LcUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+
 @Service
 public class LcUserServiceImpl implements LcUserService {
 
@@ -24,5 +26,12 @@ public class LcUserServiceImpl implements LcUserService {
         user.setUserName(userName);
         user.setUserPassword(password);
         return lcUserMapper.insertUser(user);
+    }
+
+    public static void main(String[] args){
+        System.out.println("hello word!");
+        HashMap<String, String> map = new HashMap<>();
+        map.put("String","mytest");
+        System.out.println(map.get("String"));
     }
 }
